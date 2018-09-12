@@ -1,19 +1,30 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import './App.css'
+
+import Home from './Home.js'
+import Terms from './Terms.js'
+import Privacy from './Privacy.js'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+        <Router>
+          <div className='App'>
+            <Route exact path='/' component={Home} />
+
+            <Route path='/terms' component={Terms} />
+            <Route path='/terms.html' component={Terms} />
+
+            <Route path='/privacy' component={Privacy} />
+            <Route path='/privacy.html' component={Privacy} />
+          </div>
+        </Router>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

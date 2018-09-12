@@ -1,10 +1,11 @@
 .App {
   text-align: center;
+  background-color: #FFFAF4;
+  font-family: 'Lato';
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+h1 {
+  margin: 0;
 }
 
 .App-header {
@@ -14,15 +15,184 @@
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+#title {
+  font-size: 3em;
+  padding: 32px;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.bottomBarButton {
+  background-color: #463F3E;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.bottomBar {
+  background-color: #463F3E;
+}
+
+.actionButton {
+  background-color: #56C3C9;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 4px;
+  box-shadow: 2px 2px #DDDDDD;
+  margin: auto;
+  margin-top: 200px;
+  width: 240px; 
+  height: 60px;
+}
+
+#arrow {
+  display: flex;
+  flex-direction:column;
+  height: 100px;
+  width: 140px;
+  margin-left: 24%;
+  margin-top: 8px;
+}
+
+#icon {
+  display: flex;
+  flex-direction:column;
+  padding: 8px;
+  height: 120px;
+  width: 120px;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+#solutionText {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+#homeContainer {
+  display: flex;
+}
+
+#column1 {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 225px);
+}
+
+#column2 {
+  display: flex;
+  flex-direction:column;
+  width: 450px;
+}
+
+#column3 {
+  display: flex;
+  flex-direction:column;
+  width: calc(50% - 225px);
+  padding: 20px;
+}
+
+#downloadButton {
+  display: flex;
+  flex-direction:column;
+  display:inline-block;
+  overflow:hidden;
+  background:url(assets/DownloadOnAppStore.svg);
+  background-repeat: no-repeat;
+  width:240px;
+  height:80px;
+  background-size:contain;
+  margin-top: 20px;
+}
+
+#showSolutionContainer {
+  height: 280px;
+  width: 100%;
+}
+
+#downloadContainer {
+  height: 160px;
+}
+
+#infoContainer {
+  text-align: left;
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 140px;
+  line-height: 1.5;
+}
+
+.frame {
+  position: relative;
+  width: 440px;
+  height: 875px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.insideFrame {
+  position: absolute;
+  top: 102px;
+  left: 37px;
+  bottom: 121px;
+  right: 38px;
+  width: 365px;
+  height: 652px;
+}
+
+.Terms {
+  text-align: left;
+}
+
+.Privacy {
+  text-align: left;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1000px) {
+  #homeContainer {
+    display: block;
+  }
+
+  #column1 {
+    width: 100%
+  }
+
+  #column2 {
+    width: 100%
+  }
+
+  #column3 {
+    width: 100%
+  }
+
+  .actionButton {
+    margin-top: 20px;
+  }
+
+  #infoContainer {
+    margin-top: 120px;
+  }
+
+  #arrow {
+    display: none;
+  }
+
+  #icon {
+    margin-top: 0px;
+  }
 }
