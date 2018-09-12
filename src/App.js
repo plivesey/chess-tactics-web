@@ -14,7 +14,7 @@ class App extends Component {
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
         <Router>
           <div className='App'>
-            <Route exact path='/' component={Home} />
+            <Route exact path={baseUrl + '/'} component={Home} />
 
             <Route path={baseUrl + '/terms'} component={Terms} />
             <Route path={baseUrl + '/terms.html'} component={Terms} />
