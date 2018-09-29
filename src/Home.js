@@ -44,7 +44,7 @@ class Home extends Component {
             )
         } else {
             content = (
-                <img class='insideFrame' src={Tactic} />
+                <img class='insideFrame' src={Tactic} alt='An example tactic from the app.'/>
             )
             showSolutionContent = (
                 <div>&nbsp;</div>
@@ -54,12 +54,13 @@ class Home extends Component {
         return (
             <div>
                 <h1 id='title'>Chess Tactics & Lessons</h1>
+                <h3>An app by Lockwood Productions LLC</h3>
                 <div>
                     <div id='homeContainer'>
                         <div id='column1'>
                         <div id='downloadContainer'>
-                                <img id='icon' src={Icon} />
-                                <a id='downloadButton' href="https://itunes.apple.com/us/app/chess-tactics-and-lessons/id531275673?mt=8&at=10l6Xd"></a>
+                                <img id='icon' src={Icon} alt='App Icon' />
+                                <a id='downloadButton' href="https://itunes.apple.com/us/app/chess-tactics-and-lessons/id531275673?mt=8&at=10l6Xd" />
                             </div>
                             <div id='infoContainer'>
                                 <ul>
@@ -83,14 +84,14 @@ class Home extends Component {
                         </div>
                         <div id='column2'>
                             <div class='frame'>
-                                <img class='frame' src={Frame} />
+                                <img class='frame' src={Frame} alt='' />
                                 {content}
                             </div>
                         </div>
                         <div id='column3'>
                             <div id='showSolutionContainer'>
                                 <button class='actionButton' onClick={() => this.showSolution()}>Show Solution</button>
-                                <img id='arrow' src={Arrow}/>
+                                <img id='arrow' src={Arrow} alt='' />
                                 {showSolutionContent}
                             </div>
                         </div>
@@ -101,6 +102,8 @@ class Home extends Component {
                         <a class='bottomBarButton' href='privacy'>Privacy Policy</a>
                     </div>
                 </div>
+
+                <link rel="preload" as="video" href={TacticVideo} />
             </div>
         )
     }
