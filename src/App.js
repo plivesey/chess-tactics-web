@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Route } from 'react-router-dom'
+
+// For some reason, we need to import Router here or nothing renders
+// eslint-disable-next-line
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
 
 import Home from './Home.js'
