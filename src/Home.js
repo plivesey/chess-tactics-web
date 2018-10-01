@@ -54,7 +54,7 @@ class Home extends Component {
         return (
             <div>
                 <h1 id='title'>Chess Tactics & Lessons</h1>
-                <h3>An app by Lockwood Productions LLC</h3>
+                <h3 id='subtitle'>An app by Lockwood Productions LLC</h3>
                 <div>
                     <div id='homeContainer'>
                         <div id='column1'>
