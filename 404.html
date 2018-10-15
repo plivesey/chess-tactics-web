@@ -26,6 +26,11 @@
       var segmentCount = 0;
 
       var l = window.location;
+      var whitelist = 'apple-app-site-association'
+      if (l == 'https://chesstacticsapp.com/' + whitelist) {
+          return
+      }
+
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
