@@ -60,7 +60,9 @@ class Home extends Component {
                         <div id='column1'>
                         <div id='downloadContainer'>
                                 <img id='icon' src={Icon} alt='App Icon' />
-                                <a id='downloadButton' href="https://itunes.apple.com/us/app/chess-tactics-and-lessons/id531275673?mt=8&at=10l6Xd" />
+                                <button id='downloadButton' onClick={() => {
+                                    window.open('https://itunes.apple.com/us/app/chess-tactics-and-lessons/id531275673?mt=8&at=10l6Xd', '_blank')
+                                    }} />
                             </div>
                             <div id='infoContainer'>
                                 <ul>
@@ -96,11 +98,11 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                    <div class='bottomBar'>
+                    <footer class='bottomBar'>
                         <a class='bottomBarButton' href='mailto:chesstacticsapp@gmail.com'>Contact Us</a>
                         <a class='bottomBarButton' href='terms'>Terms of Service</a>
                         <a class='bottomBarButton' href='privacy'>Privacy Policy</a>
-                    </div>
+                    </footer>
                 </div>
 
                 <link rel="preload" as="video" href={TacticVideo} />

@@ -4,10 +4,30 @@
   font-family: 'Lato';
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+html, body, #app, #app>div {
+  height: 100%;
+}
+
+.App {
+  height: 1px;
+  min-height: 100%;
+}
+
 html,body
 {
     width: 100%;
-    height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
@@ -18,6 +38,7 @@ h1 {
 }
 
 #subtitle {
+  font-size: 16px;
   padding-bottom: 32px;
 }
 
@@ -51,6 +72,8 @@ h1 {
 
 .bottomBar {
   background-color: #463F3E;
+  bottom: 0;
+  width: 100%;
 }
 
 .actionButton {
@@ -97,6 +120,7 @@ h1 {
 
 #homeContainer {
   display: flex;
+  background-color: #FFFAF4;
 }
 
 #column1 {
@@ -128,6 +152,8 @@ h1 {
   height:80px;
   background-size:contain;
   margin-top: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 #showSolutionContainer {
@@ -155,6 +181,41 @@ h1 {
   height: 875px;
   margin-right: auto;
   margin-left: auto;
+}
+
+#tacticContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #FFFAF4;
+}
+
+/* #tacticContent {
+
+} */
+
+.tacticsDiv {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #FFFAF4;
+}
+
+#tacticsSpacer {
+  height: 4px;
+}
+
+.pleaseDownloadDiv {
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #FFFAF4;
+}
+
+.tacticsDownloadContainer {
+  padding: 10px;
+  padding-top: 0;
 }
 
 .insideFrame {
