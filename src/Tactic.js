@@ -3,7 +3,13 @@ import './App.css'
 
 class Tactic extends Component {
     componentDidMount() {
-        window.location.replace('chesstcs://t/' + this.props.match.params.id)
+        if (this.props.location.search === "?redirect=true") {
+            const tacticId = this.props.match.params.id
+            window.location = 'chesstcs://t/' + tacticId
+            setTimeout(function () {
+                window.location = '/t/' + tacticId
+            }, 100);
+        }
     }
 
     render() {
