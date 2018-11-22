@@ -3,7 +3,8 @@ import './App.css'
 
 class Tactic extends Component {
     componentDidMount() {
-        if (this.props.location.search === "?redirect=true") {
+        const queryParams = new URLSearchParams(this.props.location.search)
+        if (queryParams.get('redirect') === 'true') {
             const tacticId = this.props.match.params.id
             window.location = 'chesstcs://t/' + tacticId
             setTimeout(function () {
