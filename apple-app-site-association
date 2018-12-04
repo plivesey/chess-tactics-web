@@ -12,7 +12,7 @@
             {
                 "appID": "2393T4HXB4.com.plivesey.chesstactics",
                 "paths": [
-                    "*"
+                    "/t/*"
                 ]
             }
         ]
