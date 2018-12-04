@@ -3,5 +3,16 @@
         "apps": [
             "2393T4HXB4.com.plivesey.chesstactics"
         ]
+    },
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": 2393T4HXB4.com.plivesey.chesstactics",
+                "paths": [
+                    "/t/*"
+                ]
+            }
+        ]
     }
 }
