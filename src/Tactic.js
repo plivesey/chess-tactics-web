@@ -9,7 +9,7 @@ class Tactic extends Component {
             window.location = 'chesstcs://t/' + tacticId
             setTimeout(function () {
                 window.location = '/t/' + tacticId
-            }, 100);
+            }, 500);
         }
     }
 
@@ -21,12 +21,14 @@ class Tactic extends Component {
                     <h3 id='subtitle'>An app by Lockwood Productions LLC</h3>
                     <div className='pleaseDownloadDiv'><i>Please download the app to play the tactic, see an explanation, and view the comments.</i></div>
                     <div className='tacticsDiv'>
+                        <button className='actionButton' href={'chesstcs://t/' + this.props.match.params.id}>Open in the App</button>
+                    </div>
+                    <div className='tacticsDiv'>
                         <button id='downloadButton' onClick={() => {
                             window.open('https://itunes.apple.com/us/app/chess-tactics-and-lessons/id531275673?mt=8&at=10l6Xd', '_blank')
                         }} />
                     </div>
-                    <div className='tacticsDiv'>
-                        <a href={'chesstcs://t/' + this.props.match.params.id}>I already have the app!</a>
+                    <div>
                         <div id='tacticsSpacer' />
                         <a href='/'>Home</a>
                     </div>

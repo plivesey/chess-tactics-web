@@ -5,7 +5,9 @@
         ]
     },
     "applinks": {
-        "apps": [],
+        "apps": [
+            "2393T4HXB4.com.plivesey.chesstactics"
+        ],
         "details": [
             {
                 "appID": "2393T4HXB4.com.plivesey.chesstactics",
