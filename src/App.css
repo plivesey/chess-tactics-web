@@ -94,6 +94,10 @@ h1 {
   cursor: pointer;
 }
 
+#openTacticInAppButton {
+  margin-top: 20px;
+}
+
 #arrow {
   display: flex;
   flex-direction:column;

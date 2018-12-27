@@ -19,9 +19,12 @@ class Tactic extends Component {
                 <div id='tacticContent'>
                     <h1 id='title'>Chess Tactics & Lessons</h1>
                     <h3 id='subtitle'>An app by Lockwood Productions LLC</h3>
-                    <div className='pleaseDownloadDiv'><i>Please download the app to play the tactic, see an explanation, and view the comments.</i></div>
+                    <div className='pleaseDownloadDiv'><i>Please download the iOS app to play the tactic, see an explanation, and view the comments.</i></div>
                     <div className='tacticsDiv'>
-                        <button className='actionButton' href={'chesstcs://t/' + this.props.match.params.id}>Open in the App</button>
+                        <button className='actionButton' id='openTacticInAppButton' onClick={() => {
+                            const tacticId = this.props.match.params.id
+                            window.location = 'chesstcs://t/' + tacticId
+                        }}>Open in the App</button>
                     </div>
                     <div className='tacticsDiv'>
                         <button id='downloadButton' onClick={() => {
