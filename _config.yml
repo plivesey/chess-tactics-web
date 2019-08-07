@@ -1,1 +1,3 @@
 include: [".well-known"]
+permalink: .well-known/apple-developer-domain-association.txt
+
