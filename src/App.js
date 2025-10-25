@@ -9,6 +9,8 @@ import Home from './Home.js'
 import Terms from './Terms.js'
 import Privacy from './Privacy.js'
 import Tactic from './Tactic'
+import Chess123Home from './Chess123Home.js'
+import Chess123Privacy from './Chess123Privacy.js'
 
 class App extends Component {
   render() {
@@ -22,6 +24,12 @@ class App extends Component {
 
         <Route path={'/privacy'} component={Privacy} />
         <Route path={'/privacy.html'} component={Privacy} />
+
+        <Route exact path={'/123chess'} component={Chess123Home} />
+        <Route path={'/123chess.html'} component={Chess123Home} />
+
+        <Route path={'/123chess/privacy'} component={Chess123Privacy} />
+        <Route path={'/123chess/privacy.html'} component={Chess123Privacy} />
 
         <Route path={'/t/:id'} component={Tactic} />
       </div>
