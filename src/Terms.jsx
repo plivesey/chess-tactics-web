@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Terms(props) {
     return (
         <div className='Terms'>

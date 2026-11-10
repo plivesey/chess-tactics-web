@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Chess123Privacy(props) {
     return (
         <div className='Privacy'>

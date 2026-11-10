@@ -1,0 +1,479 @@
+/*
+  Design tokens. The palette comes from the app itself: a chess-club felt
+  table, maple and walnut from the board, and a brass accent for actions.
+*/
+:root {
+  --felt: #14302a;
+  --felt-deep: #0d2420;
+  --felt-raised: #1b3f37;
+  --ivory: #f3ecda;
+  --ivory-muted: #b7c3b6;
+  --brass: #dcb460;
+  --brass-strong: #efc979;
+  --walnut: #4a2f22;
+  --line: rgba(243, 236, 218, 0.16);
+
+  --font-display: 'Bricolage Grotesque', 'Avenir Next', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --gutter: clamp(20px, 5vw, 64px);
+  --max: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--felt-deep);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: clip;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--felt);
+  color: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+main {
+  flex: 1;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--brass);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--brass-strong);
+}
+
+:focus-visible {
+  outline: 3px solid var(--brass-strong);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* Header and footer ------------------------------------------------------ */
+
+.site-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px var(--gutter);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ivory);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+}
+
+.brand:hover {
+  color: var(--ivory);
+}
+
+.brand img {
+  border-radius: 9px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  justify-content: space-between;
+  align-items: center;
+  width: min(calc(var(--max) - 2 * var(--gutter)), calc(100% - 2 * var(--gutter)));
+  margin: 0 auto;
+  color: var(--ivory-muted);
+  font-size: 0.9375rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.site-footer a {
+  color: var(--ivory);
+}
+
+.site-footer a:hover {
+  color: var(--brass-strong);
+}
+
+/* Buttons and badge ------------------------------------------------------ */
+
+.button {
+  display: inline-block;
+  padding: 0.75em 1.4em;
+  border: 0;
+  border-radius: 999px;
+  background: var(--brass);
+  color: var(--walnut);
+  font: 600 1rem/1.2 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.button:hover {
+  background: var(--brass-strong);
+  color: var(--walnut);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.badge {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 10px;
+  outline: 1px solid var(--line);
+  outline-offset: -1px;
+  transition: transform 0.15s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+}
+
+.badge img {
+  width: 200px;
+  height: auto;
+}
+
+/* Hero ------------------------------------------------------------------- */
+
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 56px) var(--gutter) clamp(48px, 8vw, 96px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 5.75rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.lede {
+  max-width: 34ch;
+  margin: 28px 0 36px;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.5;
+  color: var(--ivory-muted);
+}
+
+.hero-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* A faded board behind the phone: the one decorative element on the page. */
+.hero-stage::before {
+  content: '';
+  position: absolute;
+  inset: -8% -30% 6% -14%;
+  z-index: 0;
+  background: repeating-conic-gradient(rgba(243, 236, 218, 0.06) 0% 25%, transparent 0% 50%) 0 0 / 120px 120px;
+  transform: rotate(-8deg);
+  -webkit-mask-image: radial-gradient(closest-side, #000 35%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 35%, transparent 100%);
+}
+
+/* Screen position is measured from Frame.png (880 x 1750). */
+.phone {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 300px);
+  aspect-ratio: 880 / 1750;
+  filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.45));
+}
+
+.phone .frame,
+.phone .screen {
+  position: absolute;
+}
+
+.phone .frame {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* The frame image is opaque where the screen goes, so the screen sits above it. */
+.phone .screen {
+  z-index: 1;
+  left: 8.4%;
+  top: 11.65%;
+  width: 83%;
+  height: 74.5%;
+  overflow: hidden;
+  background: #000;
+}
+
+.phone .screen img,
+.phone .screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.puzzle-bar {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 360px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px 14px 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(13, 36, 32, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.puzzle-bar p {
+  margin: 0;
+  line-height: 1.35;
+  font-size: 0.9375rem;
+  color: var(--ivory-muted);
+}
+
+.puzzle-bar strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--ivory);
+}
+
+.puzzle-bar .button {
+  flex-shrink: 0;
+}
+
+/* Levels and features ---------------------------------------------------- */
+
+.levels {
+  background: var(--felt-deep);
+  padding: clamp(56px, 9vw, 112px) 0;
+}
+
+.levels-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: start;
+}
+
+.levels h2 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  margin-bottom: 24px;
+}
+
+.levels p {
+  max-width: 36ch;
+  margin: 0 0 12px;
+  color: var(--ivory-muted);
+}
+
+.levels b {
+  color: var(--ivory);
+}
+
+.features {
+  list-style: none;
+  margin: 0;
+}
+
+.features li {
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+
+.features li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.features h3 {
+  font-size: 1.375rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.features p {
+  margin: 0;
+}
+
+/* Closing call to action -------------------------------------------------- */
+
+.closing {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(56px, 9vw, 112px) var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px 48px;
+}
+
+.closing h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Tactic link page and 123 Chess ------------------------------------------ */
+
+.tactic {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(32px, 8vw, 96px) var(--gutter);
+}
+
+.tactic h1 {
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  margin-bottom: 16px;
+}
+
+.tactic p {
+  color: var(--ivory-muted);
+}
+
+.tactic .app-icon {
+  border-radius: 26px;
+  margin-bottom: 24px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin: 32px 0;
+}
+
+/* Terms and privacy text -------------------------------------------------- */
+
+.legal {
+  max-width: calc(72ch + 2 * var(--gutter));
+  /* Share the header's left edge on wide screens. */
+  margin: 0 auto 0 max(0px, calc((100% - var(--max)) / 2));
+  padding: clamp(24px, 5vw, 56px) var(--gutter) 80px;
+  text-align: left;
+}
+
+.legal h1 {
+  font-size: clamp(2.25rem, 6vw, 3.25rem);
+  margin-bottom: 8px;
+}
+
+.legal h2,
+.legal h3 {
+  font-size: 1.375rem;
+  letter-spacing: -0.01em;
+  margin: 2.25em 0 0.5em;
+}
+
+.legal p,
+.legal li {
+  color: #dfe5d8;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.legal p:empty {
+  display: none;
+}
+
+.legal br {
+  display: none;
+}
+
+/* Small screens ----------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-stage::before {
+    inset: -4% -20% 8% -20%;
+  }
+
+  .levels-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .closing {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
