@@ -49,9 +49,9 @@ function Privacy(props) {
             If the ownership of all or substantially all of the Lockwood Productions business, or individual business units or assets owned by Lockwood Productions that are related to the Service, were to change, your personally-identifiable information may be transferred to the new owner. In any such transfer of information, your personally-identifiable information would remain subject to this section.
 </p><h2>Updating or Deleting Your Personally-Identifiable Information</h2>
             <p></p>
-            <p>You have at all times the right to delete your account with Lockwood Productions by emailing us at chesstacticsapp@gmail.com. After your account is deleted we will retain aggregate or anonymous data collected through the Application, including Activity Data, which may be used by Lockwood Productions and shared with third parties in any manner.</p>
+            <p>You have at all times the right to delete your account with Lockwood Productions from within the app (menu, Delete Account). Your account is permanently deleted after a 30 day grace period, during which you can restore it by logging back in. You can also email us at chesstacticsapp@gmail.com. After your account is deleted we will retain aggregate or anonymous data collected through the Application, including Activity Data, which may be used by Lockwood Productions and shared with third parties in any manner.</p>
             <p></p>
-            <p>If you wish to delete your contact information that we received upon your registration, please send an email to chesstacticsapp@gmail.com and your username and email will be deleted from our database.</p>
+            <p>If you wish to delete your contact information that we received upon your registration, delete your account in the app, or send an email to chesstacticsapp@gmail.com, and your username and email will be deleted from our database.</p>
             <p></p>
             <h2>Content Contributed by Users</h2>
             <p>The Application allows users to create chess moves (tactics, openings, and lessons) which are shared with all users of the Application. The Application allows users to supply their Content for our and our users’ use in connection with this Service. In this Agreement we refer to all of this Content provided by Users as "User Content."</p>

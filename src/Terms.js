@@ -34,6 +34,8 @@ function Terms(props) {
             <p></p>
             <p>You will not upload, display or otherwise provide on or through the Service any content that: (i) is libelous, defamatory, abusive, threatening, harassing, hateful, offensive or otherwise violates any law or infringes upon the right of any third party (including copyright, trademark, privacy, publicity or other personal or proprietary rights); or (ii) in Lockwood Productions’ sole judgment, is objectionable or which restricts or inhibits any other person from using the Service or which may expose Lockwood Productions or its users to any harm or liability of any kind.</p>
             <p></p>
+            <p>There is no tolerance for objectionable content or abusive users on the Service. Users can flag any comment or tactic they believe is inappropriate, and can block any user to stop seeing that user’s comments. We aim to review reports of objectionable content within 24 hours, and may remove the content and the account of the user who posted it. We may remove any content and suspend or terminate any account at any time, without notice, for violating this section.</p>
+            <p></p>
             <h2>6. Indemnification of Lockwood Productions</h2>
             <p></p>
             <p>You agree to defend, indemnify and hold harmless Lockwood Productions and its directors, officers, employees, contractors, agents, suppliers, licensors, successors and assigns, from and against any and all losses, claims, causes of action, obligations, liabilities and damages whatsoever, including attorneys' fees, arising out of or relating to your access or use of the Service, any false representation made to us (as part of these Terms and Conditions or otherwise), your breach of any of these Terms and Conditions, or any claim that any translation we provide to you is inaccurate, inappropriate or defective in any way whatsoever.</p>
@@ -72,7 +74,7 @@ function Terms(props) {
             <p></p>
             <h2>14. Termination</h2>
             <p></p>
-            <p>Lockwood Productions may terminate your access and use of the Service immediately at any time, for any reason, and at such time you will have no further right to use the Service. You may terminate your Lockwood Productions account at any time by following the instructions available through the Service. The provisions of these Terms and Conditions relating to the protection and enforcement of Lockwood Productions’ proprietary rights, your representations and warranties, disclaimer of representations and warranties, release and indemnities, limitations of liability and types of damages, ownership of data and information, governing law and venue, and miscellaneous provisions shall survive any such termination.</p>
+            <p>Lockwood Productions may terminate your access and use of the Service immediately at any time, for any reason, and at such time you will have no further right to use the Service. You may delete your Lockwood Productions account at any time from within the app (menu, Delete Account). Your account and its data are permanently deleted after a 30 day grace period, during which you can restore the account by logging back in. The provisions of these Terms and Conditions relating to the protection and enforcement of Lockwood Productions’ proprietary rights, your representations and warranties, disclaimer of representations and warranties, release and indemnities, limitations of liability and types of damages, ownership of data and information, governing law and venue, and miscellaneous provisions shall survive any such termination.</p>
             <p></p>
             <h2>15. Proprietary Rights in Service Content and Activity Materials</h2>
             <p></p>
@@ -122,7 +124,7 @@ If you intend to seek arbitration you must first send written notice to Lockwood
             <p>These Terms and Conditions constitute the entire agreement between Lockwood Productions and you concerning the subject matter hereof. In the event that any of the Terms and Conditions are held by a court or other tribunal of competent jurisdiction to be unenforceable, such provisions shall be limited or eliminated to the minimum extent necessary so that these Terms and Conditions shall otherwise remain in full force and effect. A waiver by Lockwood Productions or you of any provision of these Terms and Conditions or any breach thereof, in any one instance, will not waive such term or condition or any subsequent breach thereof. Lockwood Productions may assign its rights or obligations under these Terms and Conditions without condition. These Terms and Conditions will be binding upon and will inure to the benefit of Lockwood Productions and you, and Lockwood Productions’ and your respective successors and permitted assigns.
 </p> <p></p>
             <p></p>
-            <p><i>Last revised on May 15, 2018</i></p>
+            <p><i>Last revised on November 9, 2026</i></p>
         </div>
     )
 }
