@@ -208,6 +208,14 @@ h3 {
   letter-spacing: -0.035em;
 }
 
+/* The copy is vertically centred against the taller phone column. Bottom padding of 2x
+   moves it up by x: 68px of padding trims about 20% (34px) of the space above the headline. */
+@media (min-width: 861px) {
+  .hero-copy {
+    padding-bottom: 68px;
+  }
+}
+
 .lede {
   max-width: 34ch;
   margin: 28px 0 36px;

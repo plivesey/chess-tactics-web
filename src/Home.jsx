@@ -6,7 +6,7 @@ import AppStoreBadge from './AppStoreBadge.jsx'
 import usePageTitle from './usePageTitle.js'
 
 const FEATURES = [
-  ['Over 22,000 free tactics', 'Puzzles from first checkmates to positions that stump grandmasters.'],
+  ['Over 30,000 free tactics', 'Puzzles from first checkmates to positions that stump grandmasters.'],
   ['Guided lessons', 'Learn strategy step by step, with lessons for beginner and intermediate players.'],
   ['Opening practice', 'Drill the openings you want to play.'],
   ['Make your own tactics', 'Create a position and share it with every player in the app.'],
@@ -22,7 +22,7 @@ export default function Home() {
         <div className="hero-copy">
           <h1>Find the winning move.</h1>
           <p className="lede">
-            Over 22,000 free chess tactics, guided lessons and opening practice for iPhone and iPad.
+            Over 30,000 free chess tactics, guided lessons and opening practice for iPhone and iPad.
             Made for beginners, strong enough for grandmasters.
           </p>
           <AppStoreBadge />
@@ -41,8 +41,8 @@ export default function Home() {
           </div>
           <div className="puzzle-bar">
             <p>
-              <strong>{solved ? 'Solved.' : 'White to move.'}</strong>{' '}
-              {solved ? 'Every tactic comes with its solution.' : 'Can you win material?'}
+              <strong>{solved ? 'Solved.' : 'White to move.'}</strong>
+              {!solved && 'Can you win material?'}
             </p>
             <button type="button" className="button" onClick={() => setSolved((value) => !value)} aria-pressed={solved}>
               {solved ? 'Back to the puzzle' : 'Show solution'}
